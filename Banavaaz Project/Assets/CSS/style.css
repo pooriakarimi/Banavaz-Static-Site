@@ -1,0 +1,1183 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: "Vazir";
+}
+@font-face {
+  font-family: "Vazir";
+  font-weight: 700;
+  src: url(/Assets/Fonts/Vazir.woff);
+}
+@font-face {
+  font-family: "Vazir Bold";
+  src: url(/Assets/Fonts/Vazir-Bold.woff);
+}
+
+:root {
+  --primaryColor: #22b1df;
+  --secondaryColor: #f7f7f7;
+  --mainWhite: #f6f6f6;
+  --darkBlue: #0e5d80;
+  --mainBlack: #222;
+  --mainGrey: #555454;
+  --lightBlue: #53b9d9;
+  --lightBlue2: #64d0f2;
+  --lightBlue3: #6cd3f4;
+  --lightBlue4: #7edcf9;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.menu {
+  background-image: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--lightBlue),
+    var(--lightBlue2)
+  );
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu > .logo {
+  max-width: 50px;
+  width: 100%;
+  height: auto;
+}
+.menu > a {
+  text-decoration: none;
+  color: var(--mainWhite);
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+.menu > a:hover {
+  color: var(--darkBlue);
+  text-shadow: 2px 2px 5px var(--mainWhite);
+  transition: all 0.7s ease-out;
+}
+.fa-bars {
+  font-size: 3.5rem;
+  color: var(--mainWhite);
+}
+.download {
+  font-size: 1.6rem;
+  width: 200px;
+  height: 40px;
+  color: var(--mainWhite);
+  background-color: var(--lightBlue);
+  border: 2px solid var(--mainWhite);
+  border-radius: 10px;
+}
+.download:hover {
+  cursor: pointer;
+  color: var(--darkBlue);
+  box-shadow: 3px 3px 5px var(--darkBlue);
+  transition: all 0.7s ease-out;
+}
+.download:active {
+  background-color: var(--darkBlue);
+  color: var(--mainWhite);
+}
+.signIn {
+  font-size: 1.6rem;
+  background-color: var(--darkBlue);
+  color: var(--primaryColor);
+  width: 200px;
+  height: 40px;
+  border: 2px solid var(--darkBlue);
+  border-radius: 10px;
+  margin-left: -60px;
+}
+.signIn:hover {
+  cursor: pointer;
+  color: var(--darkBlue);
+  background-color: var(--primaryColor);
+  box-shadow: 3px 3px 5px var(--darkBlue);
+  transition: all 0.7s ease-out;
+}
+.introduction {
+  background-image: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--lightBlue),
+    var(--lightBlue2)
+  );
+  width: 100%;
+  height: 600px;
+}
+.introduction > h1 {
+  color: var(--mainWhite);
+  font-size: 7rem;
+  width: 50vw;
+  font-weight: bold;
+  position: relative;
+  right: 10vw;
+  top: 80px;
+}
+.introduction > p {
+  width: 40vw;
+  font-size: 2.3rem;
+  color: var(--mainWhite);
+  position: absolute;
+  right: 10vw;
+  top: 250px;
+}
+.introduction > button {
+  font-size: 1.8rem;
+  width: 15vw;
+  height: 40px;
+  color: var(--primaryColor);
+  background-color: var(--mainWhite);
+  box-shadow: 3px 3px 5px var(--mainBlack);
+  border: 2px solid var(--mainWhite);
+  border-radius: 10px;
+  position: absolute;
+  right: 10vw;
+  top: 450px;
+  cursor: pointer;
+}
+.introduction > button:hover {
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+}
+.building {
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+  position: absolute;
+  left: 7vw;
+  top: 115px;
+}
+.iphone {
+  width: 100fr; /* 12vw */
+  height: auto;
+  max-width: 200px;
+  position: absolute;
+  left: 8vw;
+  top: 14vh;
+}
+.mainArticles {
+  width: 100%;
+}
+.productsRoll > a {
+  color: var(--mainWhite);
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+.productsRoll {
+  width: 100%;
+  height: 184px;
+  background-image: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--lightBlue),
+    var(--lightBlue2)
+  );
+  color: var(--mainWhite);
+  display: grid;
+  grid-template-columns: 13fr 13fr 13fr 13fr 13fr 13fr;
+  grid-template-rows: 120px 50px;
+  justify-items: center;
+  align-items: baseline;
+  text-align: center;
+}
+.product1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.product1Description {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.product2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.product2Description {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.product3 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.product3Description {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.product4 {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.product4Description {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+.product5 {
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
+.product5Description {
+  grid-column: 5/6;
+  grid-row: 2/3;
+}
+.product6 {
+  grid-column: 6/7;
+  grid-row: 1/2;
+}
+.product6Description {
+  grid-column: 6/7;
+  grid-row: 2/3;
+}
+.article1 {
+  width: 100fr;
+  height: 500px;
+  color: var(--mainWhite);
+  background-image: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--lightBlue),
+    var(--lightBlue2)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.article1 > h2 {
+  font-size: 6.5rem;
+}
+.article1 > img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+.article1 > p {
+  width: 40vw;
+  text-align: center;
+  font-size: 1.9rem;
+}
+.catalogDownload {
+  width: 1fr;
+  height: 400px;
+  background-image: linear-gradient(
+    to left,
+    var(--secondaryColor),
+    var(--mainWhite)
+  );
+  display: grid;
+  align-items: self-end;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.catalogDownload > img {
+  width: 45vw;
+  height: 400px;
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+.catalogDownload > h2 {
+  font-family: "Vazir Bold";
+  width: 51vw;
+  color: var(--darkBlue);
+  font-size: 4.8rem;
+  text-align: right;
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+.catalogDownload > h3 {
+  width: 50vw;
+  height: 100px;
+  color: var(--mainGrey);
+  font-size: 3rem;
+  text-align: right;
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+.catalogDownload > button {
+  width: 14vw;
+  height: 50px;
+  font-size: 1.9rem;
+  text-align: center;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin-bottom: 80px;
+}
+.appDownload {
+  width: 1fr;
+  height: 650px;
+  background-image: linear-gradient(
+    to left,
+    var(--secondaryColor),
+    var(--mainWhite)
+  );
+  display: grid;
+  align-items: self-end;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.appDownload > h2 {
+  font-family: "Vazir Bold";
+  width: 51vw;
+  color: var(--darkBlue);
+  font-size: 5.7rem;
+  text-align: right;
+  grid-column: 2/4;
+  grid-row: 1/2;
+  margin-right: 70px;
+}
+.appDownload > img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  grid-column: 1/2;
+  grid-row: 1/4;
+  margin-right: 100px;
+  margin-bottom: 65px;
+}
+
+.appDownload > h3 {
+  width: 42vw;
+  height: 100px;
+  color: var(--mainGrey);
+  font-size: 3.1rem;
+  text-align: right;
+  grid-column: 2/4;
+  grid-row: 2/3;
+  margin-bottom: 50px;
+  margin-right: 70px;
+}
+.appDownload > button {
+  font-family: "Vazir Bold";
+  width: 15vw;
+  height: 50px;
+  font-size: 2.1rem;
+  text-align: center;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin-bottom: 150px;
+  margin-right: 70px;
+  background-color: var(--mainWhite);
+  color: var(--darkBlue);
+  border: 2px solid var(--darkBlue);
+}
+.features {
+  width: 1fr;
+  height: 600px;
+  background-color: var(--lightBlue4);
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  justify-items: center;
+  align-items: center;
+}
+.features > h2 {
+  font-family: "Vazir Bold";
+  color: var(--darkBlue);
+  font-size: 5.4rem;
+  grid-column: 2/7;
+  grid-row: 1/2;
+  text-align: center;
+  margin-right: -51vw;
+}
+.features > img {
+  height: 170px;
+}
+.features > p {
+  color: var(--mainGrey);
+  white-space: normal;
+  width: 212px;
+  height: 150px;
+  font-size: 1.8rem;
+}
+#Door {
+  grid-column: 5/6;
+  grid-row: 2/3;
+}
+#Pets {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+#Workspace {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+#Plants {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.p1 {
+  grid-column: 5/6;
+  grid-row: 3/4;
+}
+.p2 {
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+.p3 {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.p4 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.partners {
+  width: 100%;
+  height: 500px;
+  background-color: var(--mainWhite);
+}
+.partners > h2 {
+  display: inline-block;
+  width: 19vw;
+  color: var(--darkBlue);
+  font-family: "Vazir Bold";
+  font-size: 5rem;
+  position: relative;
+  top: 20vh;
+  right: 11vw;
+}
+.partners > p {
+  width: 38vw;
+  color: var(--mainGrey);
+  font-size: 3.3rem;
+  position: relative;
+  top: 30vh;
+  right: 11vw;
+}
+.partners > img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  position: relative;
+  right: 60vw;
+  bottom: 140px;
+}
+footer {
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(
+    to right,
+    var(--primaryColor),
+    var(--lightBlue),
+    var(--lightBlue2)
+  );
+}
+.aboutUs {
+  width: 100%;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 1fr 1fr 1fr 0.75fr;
+  grid-template-rows: 0.5fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
+  background-image: linear-gradient(
+    to right,
+    var(--primaryColor),
+    var(--lightBlue),
+    var(--lightBlue2)
+  );
+  justify-content: center;
+  align-items: center;
+}
+.aboutUs > a,
+i {
+  margin-right: 100px;
+  text-align: right;
+  font-size: 1.6rem;
+}
+.aboutUs > a {
+  color: var(--mainWhite);
+  text-decoration: none;
+}
+.aboutUs > label {
+  margin-right: 100px;
+  text-align: right;
+  font-family: "Vazir Bold";
+  font-size: 2rem;
+  color: var(--mainWhite);
+}
+.label1 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.label2 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.label3 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+.label4 {
+  grid-column: 5/6;
+  grid-row: 2/3;
+}
+.label1-1 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.label1-2 {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+.label1-3 {
+  grid-column: 2/3;
+  grid-row: 5/6;
+}
+.label2-1 {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.label2-2 {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+.label2-3 {
+  grid-column: 3/4;
+  grid-row: 5/6;
+}
+.label3-1 {
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+.label3-2 {
+  grid-column: 4/5;
+  grid-row: 4/5;
+}
+.label3-3 {
+  grid-column: 4/5;
+  grid-row: 5/6;
+}
+.label3-4 {
+  grid-column: 4/5;
+  grid-row: 6/7;
+}
+.storeLabel1 {
+  grid-column: 5/6;
+  grid-row: 3/4;
+}
+.storeLabel2 {
+  grid-column: 5/6;
+  grid-row: 4/5;
+}
+.socialBox {
+  width: 350px;
+  height: 45px;
+  color: var(--mainWhite);
+  display: flex;
+  justify-content: space-around;
+  margin-right: 150px;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+.socialBox > a {
+  color: var(--mainWhite);
+}
+.socialBox > a:hover {
+  color: var(--darkBlue);
+  transition: 0.75s ease;
+}
+.aboutUs > .storeLabel2 {
+  width: 100%;
+  height: auto;
+  max-width: 205px;
+  margin-right: 47px;
+  margin-top: 10px;
+}
+.aboutUs > .storeLabel1 {
+  width: 100%;
+  height: auto;
+  max-width: 180px;
+  margin-right: 60px;
+  margin-top: 10px;
+}
+.footerEnd {
+  width: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.288);
+  display: flex;
+  justify-content: space-between;
+}
+.footerEnd > label {
+  font-size: smaller;
+  color: var(--mainWhite);
+  margin-top: 20px;
+  margin-left: 280px;
+  font-size: 1.6rem;
+}
+/* @media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .menu {
+    max-width: 412px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(
+      to left,
+      var(--primaryColor),
+      var(--lightBlue),
+      var(--lightBlue2)
+    );
+  }
+  .menu > .fa-bars {
+    color: var(--mainGrey);
+    background-color: var(--mainWhite);
+    border: solid 9px var(--mainWhite);
+    border-radius: 10px;
+    font-size: 3rem;
+    margin-left: 15px;
+    order: 1;
+  }
+  .menu > a,
+  .download {
+    visibility: hidden;
+  }
+  .signIn {
+    font-size: 1.3rem;
+    background-color: var(--darkBlue);
+    color: var(--mainWhite);
+    width: 128px;
+    height: 44px;
+    border: 1px solid var(--darkBlue);
+    border-radius: 10px;
+    margin-left: -170px;
+  }
+  .menu > .logo {
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+  }
+  .signIn:hover {
+    cursor: pointer;
+    color: var(--darkBlue);
+    background-color: var(--primaryColor);
+    box-shadow: 3px 3px 5px var(--darkBlue);
+    transition: all 0.7s ease-out;
+  }
+  .introduction {
+    background-image: linear-gradient(
+      to left,
+      var(--primaryColor),
+      var(--lightBlue),
+      var(--lightBlue2)
+    );
+    width: 100%;
+    max-width: 480px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .introduction > h1 {
+    color: var(--mainWhite);
+    font-size: 3.5rem;
+    width: 480px;
+    font-weight: bold;
+  }
+  .introduction > p {
+    width: 480px;
+    font-size: 2rem;
+    color: var(--mainWhite);
+  }
+  .introduction > button {
+    font-size: 1.8rem;
+    width: 100px;
+    height: 40px;
+    color: var(--primaryColor);
+    background-color: var(--mainWhite);
+    box-shadow: 3px 3px 5px var(--mainBlack);
+    border: 2px solid var(--mainWhite);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .introduction > button:hover {
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+  }
+  .building {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    position: relative;
+    left: 7vw;
+    top: 115px;
+    order: 3;
+  }
+  .iphone {
+    width: 200px;
+    height: auto;
+    max-width: 100px;
+    position: absolute;
+    left: 8vw;
+    top: 14vh;
+  }
+  .mainArticles {
+    width: 100%;
+  }
+  .productsRoll > a {
+    color: var(--mainWhite);
+    text-decoration: none;
+    font-size: 2.2rem;
+  }
+  .productsRoll {
+    width: 100%;
+    height: 184px;
+    background-image: linear-gradient(
+      to left,
+      var(--primaryColor),
+      var(--lightBlue),
+      var(--lightBlue2)
+    );
+    color: var(--mainWhite);
+    display: grid;
+    grid-template-columns: 13fr 13fr 13fr 13fr 13fr 13fr;
+    grid-template-rows: 120px 50px;
+    justify-items: center;
+    align-items: baseline;
+    text-align: center;
+  }
+  .product1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .product1Description {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .product2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .product2Description {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .product3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .product3Description {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .product4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+  .product4Description {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+  .product5 {
+    grid-column: 5/6;
+    grid-row: 1/2;
+  }
+  .product5Description {
+    grid-column: 5/6;
+    grid-row: 2/3;
+  }
+  .product6 {
+    grid-column: 6/7;
+    grid-row: 1/2;
+  }
+  .product6Description {
+    grid-column: 6/7;
+    grid-row: 2/3;
+  }
+  .article1 {
+    width: 100fr;
+    height: 500px;
+    color: var(--mainWhite);
+    background-image: linear-gradient(
+      to left,
+      var(--primaryColor),
+      var(--lightBlue),
+      var(--lightBlue2)
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .article1 > h2 {
+    font-size: 6.5rem;
+  }
+  .article1 > img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+  }
+  .article1 > p {
+    width: 40vw;
+    text-align: center;
+    font-size: 1.9rem;
+  }
+  .catalogDownload {
+    width: 1fr;
+    height: 400px;
+    background-image: linear-gradient(
+      to left,
+      var(--secondaryColor),
+      var(--mainWhite)
+    );
+    display: grid;
+    align-items: self-end;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .catalogDownload > img {
+    width: 45vw;
+    height: 400px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+  .catalogDownload > h2 {
+    font-family: "Vazir Bold";
+    width: 51vw;
+    color: var(--darkBlue);
+    font-size: 4.8rem;
+    text-align: right;
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+  .catalogDownload > h3 {
+    width: 50vw;
+    height: 100px;
+    color: var(--mainGrey);
+    font-size: 3rem;
+    text-align: right;
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  .catalogDownload > button {
+    width: 14vw;
+    height: 50px;
+    font-size: 1.9rem;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-bottom: 80px;
+  }
+  .appDownload {
+    width: 1fr;
+    height: 650px;
+    background-image: linear-gradient(
+      to left,
+      var(--secondaryColor),
+      var(--mainWhite)
+    );
+    display: grid;
+    align-items: self-end;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .appDownload > h2 {
+    font-family: "Vazir Bold";
+    width: 51vw;
+    color: var(--darkBlue);
+    font-size: 5.7rem;
+    text-align: right;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    margin-right: 70px;
+  }
+  .appDownload > img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    margin-right: 100px;
+    margin-bottom: 65px;
+  }
+
+  .appDownload > h3 {
+    width: 42vw;
+    height: 100px;
+    color: var(--mainGrey);
+    font-size: 3.1rem;
+    text-align: right;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    margin-bottom: 50px;
+    margin-right: 70px;
+  }
+  .appDownload > button {
+    font-family: "Vazir Bold";
+    width: 15vw;
+    height: 50px;
+    font-size: 2.1rem;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-bottom: 150px;
+    margin-right: 70px;
+    background-color: var(--mainWhite);
+    color: var(--darkBlue);
+    border: 2px solid var(--darkBlue);
+  }
+  .features {
+    width: 1fr;
+    height: 600px;
+    background-color: var(--lightBlue4);
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .features > h2 {
+    font-family: "Vazir Bold";
+    color: var(--darkBlue);
+    font-size: 5.4rem;
+    grid-column: 2/7;
+    grid-row: 1/2;
+    text-align: center;
+    margin-right: -51vw;
+  }
+  .features > img {
+    height: 170px;
+  }
+  .features > p {
+    color: var(--mainGrey);
+    white-space: normal;
+    width: 212px;
+    height: 150px;
+    font-size: 1.8rem;
+  }
+  #Door {
+    grid-column: 5/6;
+    grid-row: 2/3;
+  }
+  #Pets {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  #Workspace {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+  #Plants {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .p1 {
+    grid-column: 5/6;
+    grid-row: 3/4;
+  }
+  .p2 {
+    grid-column: 4/5;
+    grid-row: 3/4;
+  }
+  .p3 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .p4 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .partners {
+    width: 100%;
+    height: 500px;
+    background-color: var(--mainWhite);
+  }
+  .partners > h2 {
+    display: inline-block;
+    width: 19vw;
+    color: var(--darkBlue);
+    font-family: "Vazir Bold";
+    font-size: 5rem;
+    position: relative;
+    top: 20vh;
+    right: 11vw;
+  }
+  .partners > p {
+    width: 38vw;
+    color: var(--mainGrey);
+    font-size: 3.3rem;
+    position: relative;
+    top: 30vh;
+    right: 11vw;
+  }
+  .partners > img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    position: relative;
+    right: 60vw;
+    bottom: 140px;
+  }
+  footer {
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(
+      to right,
+      var(--primaryColor),
+      var(--lightBlue),
+      var(--lightBlue2)
+    );
+  }
+  .aboutUs {
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 1fr 1fr 1fr 0.75fr;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
+    background-image: linear-gradient(
+      to right,
+      var(--primaryColor),
+      var(--lightBlue),
+      var(--lightBlue2)
+    );
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutUs > a,
+  i {
+    margin-right: 100px;
+    text-align: right;
+    font-size: 1.6rem;
+  }
+  .aboutUs > a {
+    color: var(--mainWhite);
+    text-decoration: none;
+  }
+  .aboutUs > label {
+    margin-right: 100px;
+    text-align: right;
+    font-family: "Vazir Bold";
+    font-size: 2rem;
+    color: var(--mainWhite);
+  }
+  .label1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .label2 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .label3 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+  .label4 {
+    grid-column: 5/6;
+    grid-row: 2/3;
+  }
+  .label1-1 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .label1-2 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  .label1-3 {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+  .label2-1 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .label2-2 {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+  .label2-3 {
+    grid-column: 3/4;
+    grid-row: 5/6;
+  }
+  .label3-1 {
+    grid-column: 4/5;
+    grid-row: 3/4;
+  }
+  .label3-2 {
+    grid-column: 4/5;
+    grid-row: 4/5;
+  }
+  .label3-3 {
+    grid-column: 4/5;
+    grid-row: 5/6;
+  }
+  .label3-4 {
+    grid-column: 4/5;
+    grid-row: 6/7;
+  }
+  .storeLabel1 {
+    grid-column: 5/6;
+    grid-row: 3/4;
+  }
+  .storeLabel2 {
+    grid-column: 5/6;
+    grid-row: 4/5;
+  }
+  .socialBox {
+    width: 350px;
+    height: 45px;
+    color: var(--mainWhite);
+    display: flex;
+    justify-content: space-around;
+    margin-right: 150px;
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+  .socialBox > a {
+    color: var(--mainWhite);
+  }
+  .socialBox > a:hover {
+    color: var(--darkBlue);
+    transition: 0.75s ease;
+  }
+  .aboutUs > .storeLabel2 {
+    width: 100%;
+    height: auto;
+    max-width: 205px;
+    margin-right: 47px;
+    margin-top: 10px;
+  }
+  .aboutUs > .storeLabel1 {
+    width: 100%;
+    height: auto;
+    max-width: 180px;
+    margin-right: 60px;
+    margin-top: 10px;
+  }
+  .footerEnd {
+    width: 100%;
+    border-top: solid 1px rgba(255, 255, 255, 0.288);
+    display: flex;
+    justify-content: space-between;
+  }
+  .footerEnd > label {
+    font-size: smaller;
+    color: var(--mainWhite);
+    margin-top: 20px;
+    margin-left: 280px;
+    font-size: 1.6rem;
+  }
+}
+*/
